@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Help, troubleshooting, and support information for the VYRENO iPhone and iPad application.">
+  <title>VYRENO Support</title>
+  <style>
+    :root {
+      --background: #f5f7fb;
+      --surface: #ffffff;
+      --text: #111827;
+      --secondary: #5f6878;
+      --accent: #1260df;
+      --border: #dfe4ec;
+      --highlight: #eef5ff;
+      --shadow: 0 18px 45px rgba(17, 24, 39, 0.07);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --background: #070b18;
+        --surface: #11182b;
+        --text: #f7f9ff;
+        --secondary: #abb4c5;
+        --accent: #55a4ff;
+        --border: #29334a;
+        --highlight: #101f3a;
+        --shadow: none;
+      }
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 17px;
+      line-height: 1.65;
+    }
+
+    main {
+      width: min(760px, calc(100% - 32px));
+      margin: 48px auto;
+    }
+
+    header, section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: clamp(22px, 5vw, 40px);
+      margin-bottom: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 750;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3 { line-height: 1.2; }
+    h1 { margin: 10px 0 8px; font-size: clamp(2.1rem, 8vw, 3.4rem); }
+    h2 { margin: 0 0 12px; font-size: 1.35rem; }
+    h3 { margin: 0 0 6px; font-size: 1.05rem; }
+    p { margin: 0 0 14px; }
+    p:last-child { margin-bottom: 0; }
+    ol, ul { margin: 10px 0 0; padding-left: 1.4rem; }
+    li + li { margin-top: 7px; }
+    a { color: var(--accent); }
+
+    .intro {
+      background: var(--highlight);
+      border-color: color-mix(in srgb, var(--accent) 25%, var(--border));
+    }
+
+    .quick-links {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .quick-links a {
+      display: block;
+      padding: 14px 16px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--surface);
+      color: var(--text);
+      font-weight: 650;
+      text-decoration: none;
+    }
+
+    .quick-links a:hover { border-color: var(--accent); }
+
+    details {
+      border-top: 1px solid var(--border);
+      padding: 16px 0;
+    }
+
+    details:first-of-type { border-top: 0; }
+    details:last-child { padding-bottom: 0; }
+
+    summary {
+      cursor: pointer;
+      font-weight: 700;
+      line-height: 1.35;
+    }
+
+    details p, details ol, details ul { color: var(--secondary); }
+    details p { margin-top: 10px; }
+
+    .meta, footer {
+      color: var(--secondary);
+      font-size: 0.94rem;
+    }
+
+    .note {
+      color: var(--secondary);
+      font-size: 0.95rem;
+    }
+
+    footer {
+      padding: 18px 8px 42px;
+      text-align: center;
+    }
+
+    @media (max-width: 520px) {
+      main { margin: 18px auto; }
+      header, section { border-radius: 16px; }
+      .quick-links { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="eyebrow">VYRENO</div>
+      <h1>Support</h1>
+      <p class="meta">Help for VYRENO on iPhone and iPad</p>
+    </header>
+
+    <section class="intro" aria-labelledby="welcome-heading">
+      <h2 id="welcome-heading">How can we help?</h2>
+      <p>Find answers to common questions about learning progress, backups, settings, and troubleshooting.</p>
+      <nav class="quick-links" aria-label="Support topics">
+        <a href="#troubleshooting">Troubleshooting</a>
+        <a href="#data">Data &amp; backups</a>
+        <a href="#faq">Common questions</a>
+        <a href="#contact">Contact support</a>
+      </nav>
+    </section>
+
+    <section id="troubleshooting" aria-labelledby="troubleshooting-heading">
+      <h2 id="troubleshooting-heading">Troubleshooting</h2>
+      <h3>If VYRENO is not working as expected</h3>
+      <ol>
+        <li>Close VYRENO and open it again.</li>
+        <li>Restart your iPhone or iPad.</li>
+        <li>Open the App Store and install any available VYRENO update.</li>
+        <li>Confirm that your device is running the latest compatible version of iOS or iPadOS.</li>
+      </ol>
+      <p class="note">Before deleting the app, export a backup from VYRENO Settings if you want to keep your learning data. Deleting the app also deletes its locally stored data.</p>
+    </section>
+
+    <section id="data" aria-labelledby="data-heading">
+      <h2 id="data-heading">Data and backups</h2>
+      <details>
+        <summary>How do I back up my learning data?</summary>
+        <p>Open VYRENO Settings and choose the export option. VYRENO creates a JSON backup and opens Apple’s share sheet so you can save it to Files or another destination you choose.</p>
+      </details>
+      <details>
+        <summary>How do I restore a backup?</summary>
+        <p>Open VYRENO Settings, choose the import option, and select a valid VYRENO JSON backup. Review the confirmation carefully because importing replaces the learning data currently stored in the app.</p>
+      </details>
+      <details>
+        <summary>Where is my progress stored?</summary>
+        <p>VYRENO stores your learning progress privately on your device. It does not require an account and does not sync your progress through a VYRENO server.</p>
+      </details>
+      <details>
+        <summary>How do I erase my data?</summary>
+        <p>Use the reset control in VYRENO Settings and confirm the action. You can also remove all local app data by deleting VYRENO from your device.</p>
+      </details>
+    </section>
+
+    <section id="faq" aria-labelledby="faq-heading">
+      <h2 id="faq-heading">Common questions</h2>
+      <details>
+        <summary>Do I need an account or internet connection?</summary>
+        <p>No account is required. VYRENO’s lessons, projects, prompts, glossary, and progress features are designed to work offline after the app is installed.</p>
+      </details>
+      <details>
+        <summary>Why is the next lesson locked?</summary>
+        <p>Lessons follow a guided sequence. Complete the current required lesson to unlock the next step in your learning path.</p>
+      </details>
+      <details>
+        <summary>Can I use VYRENO on both iPhone and iPad?</summary>
+        <p>Yes. VYRENO supports both iPhone and iPad. Because progress is stored locally, use export and import if you want to move a backup between devices.</p>
+      </details>
+      <details>
+        <summary>Does VYRENO collect or track my activity?</summary>
+        <p>No. VYRENO does not include advertising, third-party analytics, or behavioral tracking. Read the full <a href="privacypolicy.html">VYRENO Privacy Policy</a> for details.</p>
+      </details>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact support</h2>
+      <p>If the steps above do not solve the issue, contact the VYRENO developer using the developer contact information on VYRENO’s App Store product page.</p>
+      <p>When reporting a problem, include your device model, iOS or iPadOS version, VYRENO version, what you expected to happen, and the steps that reproduce the issue. Do not include private information or attach a backup file unless requested.</p>
+    </section>
+
+    <footer>
+      <p>© 2026 VYRENO. All rights reserved.</p>
+      <p><a href="privacypolicy.html">Privacy Policy</a></p>
+    </footer>
+  </main>
+</body>
+</html>
